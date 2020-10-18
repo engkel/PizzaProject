@@ -46,18 +46,29 @@ public class pizza
 
         double sumPrice = 0;  //the combined price of the order.
 
-        do {  //do-loop for input validation [1-10]
+        //do-loop for input validation [1-10]
+        do {
             System.out.println("Pizza Menu");
-            System.out.printf("1.Burrata - Burrata, Cherry Tomatoes, Basil, Sea Salt. - PRICE DKK %.2f", pizzaPrice1);
-            System.out.printf("\n2.Aglio, Olio - Mozzarella, Ricotta, Garlic, Hot Chili Flakes, Basil - PRICE DKK %.2f", pizzaPrice2);
-            System.out.printf("\n3.Tartufata - Mozarella, home-made Truffle Spread, Mushrooms, Prosciutto di Parma, Basil - PRICE DKK %.2f", pizzaPrice3);
-            System.out.printf("\n4.Quattro Formaggi - Mozzarella, Smoked Mozzarella, Parmigiano, Gorgonzola, Basil - PRICE DKK %.2f", pizzaPrice4);
-            System.out.printf("\n5.Verdure - Tomatoes, Mozzarella, Eggplant, Caramelized Onions, Mushrooms, Basil - PRICE DKK %.2f", pizzaPrice5);
-            System.out.printf("\n6.Diavola - Tomatoes, Mozzarella, Hot Soppressata, Olives, Basil - PRICE DKK %.2f", pizzaPrice6);
-            System.out.printf("\n7.Quattro Stagioni - Tomatoes, Mozzarella, Olives, Mushrooms, Italian Ham, Artichokes, Basil - PRICE DKK %.2f", pizzaPrice7);
-            System.out.printf("\n8.Prosciutto Crudo - Tomatoes, Mozzarella, Prosciutto di Parma, Basil - PRICE DKK %.2f", pizzaPrice8);
-            System.out.printf("\n9.Boscaiola - Tomatoes, Mozzarella, Hot Italian Sausage, Gorgonzola, Mushrooms, Basil - PRICE DKK %.2f", pizzaPrice9);
-            System.out.printf("\n10.Calzone - Tomatoes, Mozzarella, Ricotta, Italian Ham, Basil - PRICE DKK %.2f", pizzaPrice10);
+            System.out.printf("1.Burrata - Burrata, Cherry Tomatoes, Basil, Sea Salt. %49s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice1);
+            System.out.printf("\n2.Aglio, Olio - Mozzarella, Ricotta, Garlic, Hot Chili Flakes, Basil. %34s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice2);
+            System.out.printf("\n3.Tartufata - Mozarella, home-made Truffle Spread, Mushrooms, Prosciutto di Parma, Basil. %14s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice3);
+            System.out.printf("\n4.Quattro Formaggi - Mozzarella, Smoked Mozzarella, Parmigiano, Gorgonzola, Basil. %21s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice4);
+            System.out.printf("\n5.Verdure - Tomatoes, Mozzarella, Eggplant, Caramelized Onions, Mushrooms, Basil. %22s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice5);
+            System.out.printf("\n6.Diavola - Tomatoes, Mozzarella, Hot Soppressata, Olives, Basil. %38s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice6);
+            System.out.printf("\n7.Quattro Stagioni - Tomatoes, Mozzarella, Olives, Mushrooms, Italian Ham, Artichokes, Basil. %10s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice7);
+            System.out.printf("\n8.Prosciutto Crudo - Tomatoes, Mozzarella, Prosciutto di Parma, Basil. %33s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice8);
+            System.out.printf("\n9.Boscaiola - Tomatoes, Mozzarella, Hot Italian Sausage, Gorgonzola, Mushrooms, Basil. %17s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice9);
+            System.out.printf("\n10.Calzone - Tomatoes, Mozzarella, Ricotta, Italian Ham, Basil. %40s", "PRICE DKK ");
+            System.out.printf("%.2f", pizzaPrice10);
             System.out.println("\nPlease, input [1-10] for ordering your chosen pizza:");
             chosenPizza = in.nextInt();
         }
