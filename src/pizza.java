@@ -49,26 +49,16 @@ public class pizza
         //do-loop for input validation [1-10]
         do {
             System.out.println("Pizza Menu");
-            System.out.printf("1.Burrata - Burrata, Cherry Tomatoes, Basil, Sea Salt. %49s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice1);
-            System.out.printf("\n2.Aglio, Olio - Mozzarella, Ricotta, Garlic, Hot Chili Flakes, Basil. %34s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice2);
-            System.out.printf("\n3.Tartufata - Mozarella, home-made Truffle Spread, Mushrooms, Prosciutto di Parma, Basil. %14s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice3);
-            System.out.printf("\n4.Quattro Formaggi - Mozzarella, Smoked Mozzarella, Parmigiano, Gorgonzola, Basil. %21s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice4);
-            System.out.printf("\n5.Verdure - Tomatoes, Mozzarella, Eggplant, Caramelized Onions, Mushrooms, Basil. %22s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice5);
-            System.out.printf("\n6.Diavola - Tomatoes, Mozzarella, Hot Soppressata, Olives, Basil. %38s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice6);
-            System.out.printf("\n7.Quattro Stagioni - Tomatoes, Mozzarella, Olives, Mushrooms, Italian Ham, Artichokes, Basil. %10s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice7);
-            System.out.printf("\n8.Prosciutto Crudo - Tomatoes, Mozzarella, Prosciutto di Parma, Basil. %33s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice8);
-            System.out.printf("\n9.Boscaiola - Tomatoes, Mozzarella, Hot Italian Sausage, Gorgonzola, Mushrooms, Basil. %17s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice9);
-            System.out.printf("\n10.Calzone - Tomatoes, Mozzarella, Ricotta, Italian Ham, Basil. %40s", "PRICE DKK ");
-            System.out.printf("%.2f", pizzaPrice10);
+            System.out.printf("1.Burrata - Burrata, Cherry Tomatoes, Basil, Sea Salt. %49s %.2f", "PRICE DKK ", pizzaPrice1);  // 2 format specifier - first applies to "first" in commas, second applies to "2nd" in commas. (?)
+            System.out.printf("\n2.Aglio, Olio - Mozzarella, Ricotta, Garlic, Hot Chili Flakes, Basil. %34s %.2f", "PRICE DKK ", pizzaPrice2);
+            System.out.printf("\n3.Tartufata - Mozarella, home-made Truffle Spread, Mushrooms, Prosciutto di Parma, Basil. %14s %.2f", "PRICE DKK ", pizzaPrice3);
+            System.out.printf("\n4.Quattro Formaggi - Mozzarella, Smoked Mozzarella, Parmigiano, Gorgonzola, Basil. %21s %.2f", "PRICE DKK ",pizzaPrice4);
+            System.out.printf("\n5.Verdure - Tomatoes, Mozzarella, Eggplant, Caramelized Onions, Mushrooms, Basil. %22s %.2f", "PRICE DKK ", pizzaPrice5);
+            System.out.printf("\n6.Diavola - Tomatoes, Mozzarella, Hot Soppressata, Olives, Basil. %38s %.2f", "PRICE DKK ", pizzaPrice6);
+            System.out.printf("\n7.Quattro Stagioni - Tomatoes, Mozzarella, Olives, Mushrooms, Italian Ham, Artichokes, Basil. %10s %.2f", "PRICE DKK ", pizzaPrice7);
+            System.out.printf("\n8.Prosciutto Crudo - Tomatoes, Mozzarella, Prosciutto di Parma, Basil. %33s %.2f", "PRICE DKK ", pizzaPrice8);
+            System.out.printf("\n9.Boscaiola - Tomatoes, Mozzarella, Hot Italian Sausage, Gorgonzola, Mushrooms, Basil. %17s %.2f", "PRICE DKK ", pizzaPrice9);
+            System.out.printf("\n10.Calzone - Tomatoes, Mozzarella, Ricotta, Italian Ham, Basil. %40s %.2f", "PRICE DKK ", pizzaPrice10);
             System.out.println("\nPlease, input [1-10] for ordering your chosen pizza:");
             chosenPizza = in.nextInt();
         }
@@ -124,14 +114,22 @@ public class pizza
             System.out.println("You have chosen " + chosenPizzaName + "." +
                     "Would you like to add additional toppings? Enter 16 to skip or enter number to " +
                     "add the corresponding topping: \n");
-            System.out.printf("1.Garlic - PRICE DKK " + extras1 + "\n2.Basil - PRICE DKK " + extras2 +
-                    "\n3.Parmigiano - Price DKK " + extras3 + "\n" + "4.Anchovies - PRICE DKK " + extras4 +
-                    "\n5.Olives - PRICE DKK " + extras5 + "\n6.Capers - PRICE DKK " + extras6 + "\n7.Mushrooms - PRICE DKK "
-                    + extras7 + "\n" + "8.Onions - PRICE DKK " + extras8 + "\n9.Eggplant - PRICE DKK " + extras9 +
-                    "\n10.Arugula - PRICE DKK " + extras10 + "\n11.Ricotta - Price DKK " + extras11 + "\n" +
-                    "12.Hot Italian Sausage - PRICE DKK " + extras12 + "\n13.Italian Ham - PRICE DKK " + extras13 + "\n" +
-                    "14.Buffalo Mozzarella - Price DKK " + extras14 + "\n15.Prosciutto di Parma - Price DKK " + extras15 +
-                    "\n");
+            System.out.printf("\n1.Garlic %28s %.2f", "PRICE DKK ", extras1);
+            System.out.printf("\n2.Basil %29s %.2f", "PRICE DKK " , extras2);
+            System.out.printf("\n3.Parmigiano %24s %.2f", "PRICE DKK ", extras3);
+            System.out.printf("\n4.Anchovies %25s %.2f", "PRICE DKK " , extras4);
+            System.out.printf("\n5.Olives %28s %.2f", "PRICE DKK ", extras5);
+            System.out.printf("\n6.Capers %28s %.2f", "PRICE DKK " , extras6);
+            System.out.printf("\n7.Mushrooms %25s %.2f", "PRICE DKK ", extras7);
+            System.out.printf("\n8.Onions %28s %.2f", "PRICE DKK " , extras8);
+            System.out.printf("\n9.Eggplant %26s %.2f", "PRICE DKK ", extras9);
+            System.out.printf("\n10.Arugula %26s %.2f", "PRICE DKK " , extras10);
+            System.out.printf("\n11.Ricotta %26s %.2f", "PRICE DKK ", extras11);
+            System.out.printf("\n12.Hot Italian Sausage %14s %.2f", "PRICE DKK " , extras12);
+            System.out.printf("\n13.Italian Ham %22s %.2f", "PRICE DKK ", extras13);
+            System.out.printf("\n14.Buffalo Mozzarella %15s %.2f", "PRICE DKK " , extras14);
+            System.out.printf("\n15.Prosciutto di Parma %14s %.2f", "PRICE DKK ", extras15);
+
                 chosenExtraNo = in.nextInt();
         }
         while (chosenExtraNo < 1 || chosenExtraNo > 16);
